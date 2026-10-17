@@ -1,3 +1,5 @@
 # Guia Rick and Morty
 
 Página única (single page) que funciona como um guia de personagens do universo de Rick and Morty. A listagem principal mostra os personagens da série em fichas com imagem, nome, status (vivo, morto ou desconhecido), espécie e origem, com filtro por status e a opção de abrir os detalhes de cada personagem. A listagem secundária reúne uma seleção de episódios favoritos, com código, nome e data de exibição. O projeto é desenvolvido em React, TypeScript e Tailwind CSS como Trabalho de Conclusão da Disciplina, e a partir da Fase 4 os personagens passam a ser carregados da API pública rickandmortyapi.com.
+
+Autor: Luís Otávio Rodrigues da Silva
