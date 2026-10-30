@@ -1,0 +1,396 @@
+/* Variáveis */
+:root {
+  --cor-fundo: #0b1530;
+  --cor-card: #16213d;
+  --cor-borda: #2a3a5e;
+  --cor-texto: #f1f3f5;
+  --cor-texto-suave: #a7b0bd;
+  --cor-destaque: #50b1b1;
+  --cor-borda-destaque: #55cc44;
+  --cor-vivo: #55cc44;
+  --cor-morto: #e05252;
+  --cor-desconhecido: #9aa3ad;
+
+  --fonte: sans-serif;
+
+  --espaco-pequeno: 8px;
+  --espaco-medio: 16px;
+  --espaco-grande: 32px;
+
+  --borda-arredondada: 10px;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--cor-fundo);
+  background-size: 90px 90px, 140px 140px, 100% 100%;
+  color: var(--cor-texto);
+  font-family: var(--fonte);
+}
+
+/* Cabeçalho */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--espaco-medio);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--cor-destaque);
+  text-decoration: none;
+  -webkit-text-stroke: 1px var(--cor-borda-destaque);
+}
+
+.menu-botao {
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  color: var(--cor-texto);
+  background-color: transparent;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-arredondada);
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+}
+
+.menu a {
+  font-weight: bold;
+  color: var(--cor-destaque);
+  text-decoration: none;
+  -webkit-text-stroke: 1px var(--cor-borda-destaque);
+}
+
+.menu a:hover {
+  color: var(--cor-texto);
+}
+
+/* Conteúdo */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-grande);
+  padding: var(--espaco-medio);
+}
+
+/* Apresentação */
+.apresentacao {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-medio);
+}
+
+.portal {
+  height: 180px;
+  border-radius: var(--borda-arredondada);
+}
+
+.apresentacao h1 {
+  margin: 0 0 var(--espaco-pequeno);
+  font-size: 28px;
+}
+
+.apresentacao p {
+  margin: 0;
+  color: var(--cor-texto-suave);
+  line-height: 1.5;
+}
+
+.contadores {
+  display: none;
+}
+
+/* Seções */
+.secao h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.secao-topo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-medio);
+  margin-bottom: var(--espaco-medio);
+}
+
+/* Filtros */
+.filtros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espaco-pequeno);
+}
+
+.filtro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  height: 44px;
+  padding: 0 var(--espaco-medio);
+  font-size: 14px;
+  color: var(--cor-texto);
+  background-color: transparent;
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filtro-ativo {
+  color: var(--cor-fundo);
+  background-color: var(--cor-destaque);
+  border-color: var(--cor-destaque);
+}
+
+/* Cores de status */
+.filtro-vivo {
+  color: var(--cor-fundo);
+  background-color: var(--cor-vivo);
+  border-color: var(--cor-vivo);
+}
+
+.filtro-morto {
+  color: var(--cor-texto);
+  background-color: var(--cor-morto);
+  border-color: var(--cor-morto);
+}
+
+.filtro-desconhecido {
+  color: var(--cor-fundo);
+  background-color: var(--cor-desconhecido);
+  border-color: var(--cor-desconhecido);
+}
+
+/* Personagens */
+.lista-personagens {
+  display: grid;
+  gap: 12px;
+}
+
+.card-personagem {
+  height: 124px;
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-arredondada);
+}
+
+/* Episódios */
+.lista-episodios {
+  display: grid;
+  gap: 10px;
+}
+
+.card-episodio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-arredondada);
+}
+
+.codigo {
+  padding: 4px var(--espaco-pequeno);
+  font-family: monospace;
+  font-size: 13px;
+  color: var(--cor-destaque);
+  border: 1px solid var(--cor-destaque);
+  border-radius: 6px;
+}
+
+.card-episodio h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card-episodio p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--cor-texto-suave);
+}
+
+.comentario {
+  display: none;
+}
+
+/* Rodapé */
+.rodape {
+  display: grid;
+  gap: var(--espaco-medio);
+  padding: var(--espaco-medio);
+  border-top: 1px solid var(--cor-borda);
+}
+
+.rodape strong {
+  color: var(--cor-destaque);
+}
+
+.rodape p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--cor-texto-suave);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .cabecalho {
+    padding: var(--espaco-medio) var(--espaco-grande);
+  }
+
+  .menu-botao {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    gap: 24px;
+  }
+
+  main {
+    padding: var(--espaco-grande);
+  }
+
+  .apresentacao {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .portal {
+    width: 280px;
+    height: 220px;
+    flex-shrink: 0;
+  }
+
+  .apresentacao-texto {
+    flex: 1;
+  }
+
+  .apresentacao h1 {
+    font-size: 32px;
+  }
+
+  .filtros {
+    display: flex;
+  }
+
+  .lista-personagens {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espaco-medio);
+  }
+
+  .card-personagem {
+    height: 140px;
+  }
+
+  .lista-episodios {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--espaco-medio);
+  }
+
+  .card-episodio {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rodape {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 24px var(--espaco-grande);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .cabecalho {
+    padding: var(--espaco-medio) 64px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .menu {
+    gap: var(--espaco-grande);
+  }
+
+  main {
+    gap: 48px;
+    padding: 40px 64px;
+  }
+
+  .apresentacao {
+    gap: 40px;
+  }
+
+  .portal {
+    flex: 1;
+    width: auto;
+    height: 360px;
+  }
+
+  .apresentacao h1 {
+    font-size: 48px;
+  }
+
+  .contadores {
+    display: flex;
+    gap: 24px;
+    margin-top: var(--espaco-medio);
+  }
+
+  .contadores strong {
+    display: block;
+    font-size: 24px;
+    color: var(--cor-destaque);
+  }
+
+  .contadores span {
+    color: var(--cor-texto-suave);
+  }
+
+  .secao h2 {
+    font-size: 26px;
+  }
+
+  .secao-topo {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .lista-personagens {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .card-personagem {
+    height: 160px;
+  }
+
+  .lista-episodios {
+    gap: 20px;
+  }
+
+  .card-episodio {
+    padding: var(--espaco-medio);
+  }
+
+  .card-episodio h3 {
+    font-size: 17px;
+  }
+
+  .comentario {
+    display: block;
+  }
+
+  .rodape {
+    gap: 24px;
+    padding: 28px 64px;
+  }
+}
