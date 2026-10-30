@@ -38,6 +38,32 @@ function App() {
             </div>
           </div>
         </section>
+
+        <section id="personagens" className="secao">
+          <div className="secao-topo">
+            <h2>Personagens</h2>
+
+            <div className="filtros">
+              <button className="filtro filtro-ativo">Todos</button>
+              <button className="filtro filtro-vivo">Vivo</button>
+              <button className="filtro filtro-morto">Morto</button>
+              <button className="filtro filtro-desconhecido">Desconhecido</button>
+            </div>
+          </div>
+
+          <div className="lista-personagens">
+            <article className="card-personagem"></article>
+            <article className="card-personagem"></article>
+            <article className="card-personagem"></article>
+            <article className="card-personagem"></article>
+            <article className="card-personagem"></article>
+            <article className="card-personagem"></article>
+            <article className="card-personagem"></article>
+            <article className="card-personagem"></article>
+            <article className="card-personagem"></article>
+            <article className="card-personagem"></article>
+          </div>
+        </section>
       </main>
     </>
   )

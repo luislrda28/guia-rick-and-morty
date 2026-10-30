@@ -89,7 +89,6 @@ main {
 .portal {
   height: 180px;
   border-radius: var(--borda-arredondada);
-  background: radial-gradient(circle, #b6f36a 0%, #4caf50 40%, var(--cor-card) 70%);
 }
 
 .apresentacao h1 {
@@ -105,6 +104,79 @@ main {
 
 .contadores {
   display: none;
+}
+
+/* Seções */
+.secao h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.secao-topo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-medio);
+  margin-bottom: var(--espaco-medio);
+}
+
+/* Filtros */
+.filtros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espaco-pequeno);
+}
+
+.filtro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  height: 44px;
+  padding: 0 var(--espaco-medio);
+  font-size: 14px;
+  color: var(--cor-texto);
+  background-color: transparent;
+  border: 1px solid var(--cor-borda);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filtro-ativo {
+  color: var(--cor-fundo);
+  background-color: var(--cor-destaque);
+  border-color: var(--cor-destaque);
+}
+
+/* Cores de status */
+.filtro-vivo {
+  color: var(--cor-fundo);
+  background-color: var(--cor-vivo);
+  border-color: var(--cor-vivo);
+}
+
+.filtro-morto {
+  color: var(--cor-texto);
+  background-color: var(--cor-morto);
+  border-color: var(--cor-morto);
+}
+
+.filtro-desconhecido {
+  color: var(--cor-fundo);
+  background-color: var(--cor-desconhecido);
+  border-color: var(--cor-desconhecido);
+}
+
+/* Personagens */
+.lista-personagens {
+  display: grid;
+  gap: 12px;
+}
+
+.card-personagem {
+  height: 124px;
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-arredondada);
 }
 
 /* Tablet */
@@ -144,6 +216,19 @@ main {
 
   .apresentacao h1 {
     font-size: 32px;
+  }
+
+  .filtros {
+    display: flex;
+  }
+
+  .lista-personagens {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espaco-medio);
+  }
+
+  .card-personagem {
+    height: 140px;
   }
 }
 
@@ -194,5 +279,24 @@ main {
 
   .contadores span {
     color: var(--cor-texto-suave);
+  }
+
+  .secao h2 {
+    font-size: 26px;
+  }
+
+  .secao-topo {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .lista-personagens {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .card-personagem {
+    height: 160px;
   }
 }
