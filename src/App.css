@@ -179,6 +179,46 @@ main {
   border-radius: var(--borda-arredondada);
 }
 
+/* Episódios */
+.lista-episodios {
+  display: grid;
+  gap: 10px;
+}
+
+.card-episodio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-arredondada);
+}
+
+.codigo {
+  padding: 4px var(--espaco-pequeno);
+  font-family: monospace;
+  font-size: 13px;
+  color: var(--cor-destaque);
+  border: 1px solid var(--cor-destaque);
+  border-radius: 6px;
+}
+
+.card-episodio h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card-episodio p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--cor-texto-suave);
+}
+
+.comentario {
+  display: none;
+}
+
 /* Tablet */
 @media (min-width: 768px) {
   .cabecalho {
@@ -229,6 +269,16 @@ main {
 
   .card-personagem {
     height: 140px;
+  }
+
+  .lista-episodios {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--espaco-medio);
+  }
+
+  .card-episodio {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -298,5 +348,21 @@ main {
 
   .card-personagem {
     height: 160px;
+  }
+
+  .lista-episodios {
+    gap: 20px;
+  }
+
+  .card-episodio {
+    padding: var(--espaco-medio);
+  }
+
+  .card-episodio h3 {
+    font-size: 17px;
+  }
+
+  .comentario {
+    display: block;
   }
 }
