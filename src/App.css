@@ -219,6 +219,24 @@ main {
   display: none;
 }
 
+/* Rodapé */
+.rodape {
+  display: grid;
+  gap: var(--espaco-medio);
+  padding: var(--espaco-medio);
+  border-top: 1px solid var(--cor-borda);
+}
+
+.rodape strong {
+  color: var(--cor-destaque);
+}
+
+.rodape p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--cor-texto-suave);
+}
+
 /* Tablet */
 @media (min-width: 768px) {
   .cabecalho {
@@ -279,6 +297,11 @@ main {
   .card-episodio {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .rodape {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 24px var(--espaco-grande);
   }
 }
 
@@ -364,5 +387,10 @@ main {
 
   .comentario {
     display: block;
+  }
+
+  .rodape {
+    gap: 24px;
+    padding: 28px 64px;
   }
 }
