@@ -139,9 +139,14 @@ main {
   border: 1px solid var(--cor-borda);
   border-radius: 999px;
   cursor: pointer;
+  opacity: 0.5;
 }
 
-.filtro-ativo {
+.filtro:hover {
+  opacity: 0.8;
+}
+
+.filtro-todos {
   color: var(--cor-fundo);
   background-color: var(--cor-destaque);
   border-color: var(--cor-destaque);
@@ -164,6 +169,12 @@ main {
   color: var(--cor-fundo);
   background-color: var(--cor-desconhecido);
   border-color: var(--cor-desconhecido);
+}
+
+/* Filtro selecionado */
+.filtro.ativo {
+  opacity: 1;
+  border: 2px solid var(--cor-texto);
 }
 
 /* Personagens */

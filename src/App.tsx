@@ -1,3 +1,4 @@
+import { useState } from "react"
 import './App.css'
 import { Cabecalho } from "./components/layout/cabecalho"
 import { Rodape } from "./components/layout/rodape"
@@ -6,8 +7,19 @@ import { ListaPersonagens } from "./components/personagens/lista-personagens"
 import { ListaEpisodios } from "./components/episodios/lista-episodios"
 import { personagens } from "./data/personagens"
 import { episodios } from "./data/episodios"
+import { listaStatus } from "./data/status"
 
 function App() {
+  const [statusAtivo, setStatusAtivo] = useState('todos')
+
+  function handleSelecionarStatus(alias: string) {
+    setStatusAtivo(alias)
+  }
+
+  const personagensFiltrados = statusAtivo == 'todos'
+    ? personagens
+    : personagens.filter((personagem) => personagem.status == statusAtivo)
+
   return (
     <>
       <Cabecalho />
@@ -18,20 +30,12 @@ function App() {
           totalEpisodios={episodios.length}
         />
 
-        <section id="personagens" className="secao">
-          <div className="secao-topo">
-            <h2>Personagens</h2>
-
-            <div className="filtros">
-              <button className="filtro filtro-ativo">Todos</button>
-              <button className="filtro filtro-vivo">Vivo</button>
-              <button className="filtro filtro-morto">Morto</button>
-              <button className="filtro filtro-desconhecido">Desconhecido</button>
-            </div>
-          </div>
-
-          <ListaPersonagens personagens={personagens} />
-        </section>
+        <ListaPersonagens
+          personagens={personagensFiltrados}
+          listaStatus={listaStatus}
+          statusAtivo={statusAtivo}
+          onSelecionarStatus={handleSelecionarStatus}
+        />
 
         <ListaEpisodios episodios={episodios} />
       </main>
