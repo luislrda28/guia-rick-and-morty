@@ -173,10 +173,47 @@ main {
 }
 
 .card-personagem {
-  height: 124px;
+  padding: var(--espaco-medio);
   background-color: var(--cor-card);
   border: 1px solid var(--cor-borda);
   border-radius: var(--borda-arredondada);
+}
+
+.card-personagem h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.status {
+  margin: 4px 0 var(--espaco-pequeno);
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.status-vivo {
+  color: var(--cor-vivo);
+}
+
+.status-morto {
+  color: var(--cor-morto);
+}
+
+.status-desconhecido {
+  color: var(--cor-desconhecido);
+}
+
+.rotulo {
+  margin: 0;
+  font-size: 12px;
+  color: var(--cor-texto-suave);
+  text-transform: uppercase;
+}
+
+.origem {
+  margin: 0;
+  font-size: 14px;
+  color: var(--cor-texto-suave);
 }
 
 /* Episódios */
@@ -285,10 +322,6 @@ main {
     gap: var(--espaco-medio);
   }
 
-  .card-personagem {
-    height: 140px;
-  }
-
   .lista-episodios {
     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--espaco-medio);
@@ -367,10 +400,6 @@ main {
   .lista-personagens {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-  }
-
-  .card-personagem {
-    height: 160px;
   }
 
   .lista-episodios {

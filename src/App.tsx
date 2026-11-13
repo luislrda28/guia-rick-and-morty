@@ -2,6 +2,7 @@ import './App.css'
 import { Cabecalho } from "./components/layout/cabecalho"
 import { Rodape } from "./components/layout/rodape"
 import { Apresentacao } from "./components/apresentacao"
+import { ListaPersonagens } from "./components/personagens/lista-personagens"
 import { personagens } from "./data/personagens"
 import { episodios } from "./data/episodios"
 
@@ -28,18 +29,7 @@ function App() {
             </div>
           </div>
 
-          <div className="lista-personagens">
-            <article className="card-personagem"></article>
-            <article className="card-personagem"></article>
-            <article className="card-personagem"></article>
-            <article className="card-personagem"></article>
-            <article className="card-personagem"></article>
-            <article className="card-personagem"></article>
-            <article className="card-personagem"></article>
-            <article className="card-personagem"></article>
-            <article className="card-personagem"></article>
-            <article className="card-personagem"></article>
-          </div>
+          <ListaPersonagens personagens={personagens} />
         </section>
 
         <section id="episodios" className="secao">
