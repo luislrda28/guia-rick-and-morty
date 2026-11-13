@@ -1,43 +1,20 @@
 import './App.css'
+import { Cabecalho } from "./components/layout/cabecalho"
+import { Rodape } from "./components/layout/rodape"
+import { Apresentacao } from "./components/apresentacao"
+import { personagens } from "./data/personagens"
+import { episodios } from "./data/episodios"
 
 function App() {
   return (
     <>
-      <header className="cabecalho">
-        <a href="#" className="logo">Multiverso</a>
-
-        <button className="menu-botao" aria-label="Abrir menu">☰</button>
-
-        <nav className="menu">
-          <a href="#personagens">Personagens</a>
-          <a href="#episodios">Episódios</a>
-          <a href="#sobre">Sobre</a>
-        </nav>
-      </header>
+      <Cabecalho />
 
       <main>
-        <section className="apresentacao">
-          <div className="portal"></div>
-
-          <div className="apresentacao-texto">
-            <h1>Guia de personagens</h1>
-            <p>
-              Conheça quem é quem no multiverso de Rick and Morty: humanos,
-              alienígenas e muitas versões do Rick.
-            </p>
-
-            <div className="contadores">
-              <div>
-                <strong>10</strong>
-                <span>personagens</span>
-              </div>
-              <div>
-                <strong>3</strong>
-                <span>episódios favoritos</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Apresentacao
+          totalPersonagens={personagens.length}
+          totalEpisodios={episodios.length}
+        />
 
         <section id="personagens" className="secao">
           <div className="secao-topo">
@@ -101,20 +78,7 @@ function App() {
         </section>
       </main>
 
-      <footer id="sobre" className="rodape">
-        <div>
-          <strong>Multiverso</strong>
-          <p>Guia de personagens feito por luis.</p>
-        </div>
-        <div>
-          <strong>fonte dos dados, jaja tem</strong>
-          <p>rickandmortyapi.com</p>
-        </div>
-        <div>
-          <strong>Projeto da faculdade</strong>
-          <p>TCD - 2026</p>
-        </div>
-      </footer>
+      <Rodape />
     </>
   )
 }
